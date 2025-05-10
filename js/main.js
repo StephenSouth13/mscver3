@@ -50,18 +50,65 @@ window.addEventListener('scroll', function() {
     const mobileMenu = document.getElementById("nav-mobile-menu");
     const overlay = document.getElementById("mobile-overlay");
 
-    function openMenu() {
-      mobileMenu.classList.add("active");
-      overlay.classList.add("active");
-    }
+    // Mở menu
+    toggle.addEventListener('click', () => {
+      mobileMenu.classList.add('active');
+      overlay.classList.add('active');
+    });
 
-    function closeMenu() {
-      mobileMenu.classList.remove("active");
-      overlay.classList.remove("active");
-    }
+    // Đóng menu
+    close.addEventListener('click', () => {
+      mobileMenu.classList.remove('active');
+      overlay.classList.remove('active');
+    });
 
-    toggle.addEventListener("click", openMenu);
-    close.addEventListener("click", closeMenu);
-    overlay.addEventListener("click", closeMenu); // click nền mờ để đóng menu
+    // Đóng menu khi nhấn vào overlay
+    overlay.addEventListener('click', () => {
+      mobileMenu.classList.remove('active');
+      overlay.classList.remove('active');
+    });
   });
-  
+  let currentSlide = 0;
+
+function moveSlide(direction) {
+  const slides = document.querySelectorAll('.msc-grid');
+  const totalSlides = slides.length;
+
+  // Cập nhật chỉ số slide hiện tại
+  currentSlide += direction;
+
+  // Đảm bảo chỉ số không ra ngoài giới hạn
+  if (currentSlide < 0) {
+    currentSlide = totalSlides - 1; // Quay về slide cuối
+    document.getElementById("current-year").innerText = "KHÓA 2024";
+  } else if (currentSlide >= totalSlides) {
+    currentSlide = 0; // Quay về slide đầu
+    document.getElementById("current-year").innerText = "KHÓA 2025";
+  }
+
+  // Di chuyển carousel
+  const carousel = document.querySelector('.carousel-slide');
+  const offset = -currentSlide * (300 + 20); // 300 là chiều rộng item + 20 là khoảng cách
+  carousel.style.transform = `translateX(${offset}px)`;
+}
+// Back to Top Button
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopButton = document.getElementById('back-to-top');
+
+  // Hiển thị nút khi cuộn xuống
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      backToTopButton.classList.add('show');
+    } else {
+      backToTopButton.classList.remove('show');
+    }
+  });
+
+  // Cuộn lên đầu trang khi nhấn nút
+  backToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+});

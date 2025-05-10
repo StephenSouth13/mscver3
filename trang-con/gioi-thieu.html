@@ -5,8 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>MSC Homepage</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <title>GIỚI THIỆU</title>
+  <link rel="stylesheet" href="../css/gioithieu.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,15 +26,15 @@
       </div>
 
       <div class="d-flex">
-        <a href="login.html" target="_blank">
+        <a href="../login.html" target="_blank">
           <button class="profile-btn">Đăng Nhập</button>
         </a>
 
-        <a class="d-done" href="register.html" target="_blank">
+        <a class="d-done" href="../register.html" target="_blank">
           <button class="profile-btn">Đăng Ký</button>
         </a>
 
-        <a class="d-done" href="profile.html" target="_blank">
+        <a class="d-done" href="../profile.html" target="_blank">
           <button class="profile-btn">Hồ sơ năng lực</button>
         </a>
       </div>
@@ -45,7 +45,7 @@
   <!-- Header + Navbar -->
   <header id="header">
     <div class="logo">
-      <a href="index.html"><img src="msc/assets/logo/logo.png" alt="MSC Logo" /></a>
+      <a href="../index.html"><img src="../msc/assets/logo/logo.png" alt="MSC Logo" /></a>
     </div>
     <nav class="navbar">
       <!-- Nút mở menu (hamburger icon) -->
@@ -55,13 +55,13 @@
 
       <!-- Menu dành cho PC -->
       <ul class="nav-menu">
-        <li><a href="trang-con/gioi-thieu.html">GIỚI THIỆU</a></li>
-        <li><a href="trang-con/dao-tao.html">ĐÀO TẠO</a></li>
-        <li><a href="#du-an">DỰ ÁN</a></li>
-        <li><a href="#mc">MENTORS</a></li>
-        <li><a href="#msc">MSCer</a></li>
-        <li><a href="#msc">ĐỒNG HÀNH</a></li>
-        <li><a href="#lh">LIÊN HỆ</a></li>
+       <li><a href="gioi-thieu.html" class="active">GIỚI THIỆU</a></li>
+        <li><a href="dao-tao.html">ĐÀO TẠO</a></li>
+        <li><a href="du-an.html">DỰ ÁN</a></li>
+        <li><a href="mentor.html">MENTORS</a></li>
+        <li><a href="mscer.html">MSCer</a></li>
+        <li><a href="dong-hanh.html">ĐỒNG HÀNH</a></li>
+        <li><a href="lien-he.html">LIÊN HỆ</a></li>
       </ul>
     </nav>
     <div class="mobile-overlay" id="mobile-overlay"></div>
@@ -75,20 +75,20 @@
       <button id="mobile-close"><i class="bi bi-x-lg"></i></button>
     </div>
     <ul class="nav-mobile">
-      <li><a href="trang-con/gioi-thieu.html">GIỚI THIỆU</a></li>
-      <li><a href="#dao-tao">ĐÀO TẠO</a></li>
-      <li><a href="#du-an">DỰ ÁN</a></li>
-      <li><a href="#mc">MENTORS</a></li>
-      <li><a href="#msc">MSCer</a></li>
-      <li><a href="#msc">ĐỒNG HÀNH</a></li>
-      <li><a href="#lh">LIÊN HỆ</a></li>
+      <li><a href="gioi-thieu.html" class="active">GIỚI THIỆU</a></li>
+        <li><a href="dao-tao.html">ĐÀO TẠO</a></li>
+        <li><a href="du-an.html">DỰ ÁN</a></li>
+        <li><a href="mentor.html">MENTORS</a></li>
+        <li><a href="mscer.html">MSCer</a></li>
+        <li><a href="dong-hanh.html">ĐỒNG HÀNH</a></li>
+        <li><a href="lien-he.html">LIÊN HỆ</a></li>
     </ul>
   </div>
 
   <!-- icon-->
   <div class="floating-contact">
     <a href="https://www.facebook.com/msc.edu.vn" class="contact-btn fb-btn" target="_blank">
-      <img src="msc/assets/logo/fb.png" alt="Facebook">
+      <img src="../msc/assets/logo/fb.png" alt="Facebook">
     </a>
   <!--  <a href="#" class="contact-btn call-btn">
       <img src="msc/assets/logo/ytb copy.png" alt=" Youtube">
@@ -97,7 +97,7 @@
       <img src="msc/assets/logo/tiktok.png" alt="TikTok">
     </a>-->
     <a href="https://zalo.me/g/acumou501" class="contact-btn fb-btn" target="_blank">
-      <img src="msc/assets/logo/zalo.webp" alt="Zalo">
+      <img src="../msc/assets/logo/zalo.webp" alt="Zalo">
     </a>
     <a herf="" id="back-to-top" class="back-to-top">
   <i class="bi bi-arrow-up"></i>
@@ -106,337 +106,90 @@
 
   <!-- Hero Carousel -->
   <section class="hero-carousel">
-    <div class="carousel-container">
-      <div class="carousel-slide active">
-        <img src="msc/assets/banner-hoc-vien-quan-ly-pace.webp" alt="Slide 1" />
+    <div class="hero-section">
+    <div class="overlay"></div>
+    <div class="hero-text">
+      GIỚI THIỆU VỀ MSC
+    </div>
+  </div>
+ </section>
+
+<!--Nội dung-->
+<section class="bni-vietnam">
+  <div class="container">
+    <div class="row">
+      <!-- Left Column: Text Content -->
+      <div class="col-md-7">
+        <p>BNI là tổ chức kết nối thương mại lớn nhất và thành công nhất trên thế giới. BNI được Tiến sĩ Ivan Misner sáng lập vào năm 1985...</p>
+        <h2>BNI VIỆT NAM</h2>
+        <p>BNI được ông Michael Hồ Quang Minh – Chủ tịch BNI Việt Nam biết đến và xúc tiến triển khai tại Việt Nam từ tháng 9 năm 2009...</p>
+        <p>Hiện tại, BNI Việt Nam đã có <strong>8,960</strong> Thành viên với <strong>234</strong> Chapter tại các Vùng và tỉnh thành lớn trên cả nước như Hồ Chí Minh, Hà Nội...</p>
       </div>
-      <div class="carousel-slide">
-        <img src="msc/assets/banner-hoc-vien-quan-ly-pace.webp" alt="Slide 2" />
-      </div>
-    </div>
 
-    <!-- Nút điều hướng -->
-    <button class="prev">&#10094;</button>
-    <button class="next">&#10095;</button>
-
-    <!-- Indicators -->
-    <div class="carousel-dots">
-      <span class="dot active" data-index="0"></span>
-      <span class="dot" data-index="1"></span>
-    </div>
-  </section>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const slides = document.querySelectorAll('.carousel-slide');
-      const dots = document.querySelectorAll('.dot');
-      const container = document.querySelector('.carousel-container');
-      const prevBtn = document.querySelector('.prev');
-      const nextBtn = document.querySelector('.next');
-
-      let currentIndex = 0;
-
-      function goToSlide(index) {
-        currentIndex = index;
-        container.style.transform = `translateX(-${index * 100}vw)`;
-        dots.forEach(dot => dot.classList.remove('active'));
-        dots[index].classList.add('active');
-      }
-
-      nextBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex + 1) % slides.length;
-        goToSlide(currentIndex);
-      });
-
-      prevBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-        goToSlide(currentIndex);
-      });
-
-      dots.forEach(dot => {
-        dot.addEventListener('click', () => {
-          goToSlide(parseInt(dot.dataset.index));
-        });
-      });
-
-      // Tự động chuyển slide
-      setInterval(() => {
-        currentIndex = (currentIndex + 1) % slides.length;
-        goToSlide(currentIndex);
-      }, 5000); // mỗi 5 giây
-    });
-  </script>
-
-
-  <!--ảnh nền-->
-  <section class="underweb">
-    <div class="underweb-wrapper">
-      <img src="msc/assets/banner-danh-muc-dao-tao.webp" alt="Banner Đào Tạo">
-    </div>
-  </section>
-
-
-  <style>
-    .underweb {
-      background-color: #f2f6fa;
-      /* nền xám nhạt */
-      padding: 0;
-      margin: 0;
-    }
-
-    .underweb-wrapper {
-      width: 100vw;
-      margin: 0 auto;
-      overflow: hidden;
-      border: none;
-    }
-
-    .underweb-wrapper img {
-      width: 100%;
-      transform: scale(0.7);
-      /* 70% kích thước */
-      transform-origin: center;
-    }
-  </style>
-
- <!--Các dự án-->
-
- <style>
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
-
-  .npo-section {
-    background-color: #005A99;
-    padding: 60px 20px;
-  }
-
-  .npo-section h2 {
-    color: #fff;
-    font-size: 2rem; /* thêm dòng này */
-    text-align: center;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-
-  .npo-section p.section-desc {
-    color: #fff;
-    text-align: center;
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 50px;
-  }
-
-  .npo-box {
-    background: #fff;
-    margin: 20px auto;
-    max-width: 960px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-wrap: wrap;
-    border: 1px solid #ddd;
-    border-radius: 0;
-    position: relative;
-  }
-  /*btn*/
-
-  .btn {
-    display: inline-block;
-    padding: 8px 16px;
-    background-color: #0d6efd;
-    color: rgb(255, 255, 255);
-    border-radius: 4px;
-    text-decoration: none;
-    transition: background 0.3s;
-}
-  /* Line vàng dưới cùng mỗi box */
-  .npo-box::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 6px;
-    background-color: #CBB64B;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-  }
-
-  .logo-container {
-    flex: 1 1 250px;
-    background: #f5f5f5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-    overflow: hidden;
-    /* border-bottom: 6px solid #CBB64B;  ❌ ĐÃ XOÁ dòng này */
-  }
-
-  .logo-container img {
-    max-width: 100%;
-    height: auto;
-    transform: scale(1.3);
-    transition: transform 0.4s ease;
-  }
-
-  .logo-container:hover img {
-    transform: scale(1.05);
-  }
-
-  .content-container {
-    flex: 2 1 400px;
-    padding: 0 20px;
-    margin: 0 auto;
-  }
-  .content-container .btn {
-  align-self: center; /* center button */
-  margin-top: 20px;    /* tạo khoảng cách với đoạn văn */
-}
-
-  .container {
-    max-width: 1140px;
-    margin: 0 auto;
-    padding: 0 15px;
-  }
- .container h2{
-    font-size: 1.8rem;
-  }
-  .content-container h5 {
-    font-size: 1.3rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-
-  .content-container p {
-    margin: 0;
-    color: #333;
-    line-height: 1.6;
-  }
-
-  /* === MOBILE FRIENDLY === */
-  @media (max-width: 768px) {
-    .npo-box {
-      flex-direction: column;
-      position: relative;
-    }
-
-    .logo-container, .content-container {
-      flex: 1 1 100%;
-      padding: 0;
-      text-align: center;
-    }
-
-    .logo-container img {
-      width: 100%;
-      height: auto;
-      max-width: 100%;
-      transform: none;
-      display: block;
-    }
-
-    .content-container h5 {
-      font-size: 1rem;
-      font-weight: bold;
-      margin: 15px 0 10px;
-    }
-    
-
-    .content-container p {
-      text-align: center;
-      font-size: 1rem;
-      line-height: 1.5;
-    }
-
-    .npo-box:not(:last-child) {
-      border-bottom: 1px solid #ddd;
-    }
-  }
-</style>
-</head>
-
-<body>
-
-  <section class="npo-section">
-    <div class="container">
-      <h2>CÁC TỔ CHỨC GIÁO DỤC<br>PHI LỢI NHUẬN CỦA MSC</h2>
-      <p class="section-desc">
-        Song hành với các hoạt động nói trên, MSC còn có MSC NPO / Tổ chức phi lợi nhuận<br>
-        với các sáng kiến giáo dục khai phóng có ý nghĩa được triển khai liên tục kể từ năm 2007 tới nay<br>
-        để góp phần hiện thực hóa sứ mệnh của mình một cách tổng thể, đa chiều và đầy đủ nhất.
-      </p>
-
-      <!-- Tổ chức 1 -->
-      <div class="npo-box">
-        <div class="logo-container">
-          <img src="https://www.pace.edu.vn/uploads/partners/NPO/Logo_OpenEdu.webp" alt="OpenEdu Initiative">
+      <!-- Right Column: Statistics -->
+      <div class="col-md-5 text-center text-danger">
+        <div class="stat-block">
+          <h3>234</h3>
+          <p>CHAPTER</p>
         </div>
-        <div class="content-container">
-          <h5>OpenEdu Initiative</h5>
-          <p>
-            Sáng kiến OpenEdu là “ngôi trường khai phóng trực tuyến” đầu tiên của Việt Nam, với tinh hoa tri thức toàn
-            cầu, nhưng được chuyển ngữ thành tiếng Việt và hoàn toàn miễn phí. OpenEdu được sáng lập bởi MSC và được
-            điều hành bởi IPL Scholarship.
-          </p>
-          <a href="#" class="btn">Tìm hiểu thêm</a>
+        <div class="stat-block">
+          <h3>8,960</h3>
+          <p>THÀNH VIÊN</p>
         </div>
-      </div>
-    </div>
-
-      <!-- Tổ chức 2 -->
-      <div class="npo-box">
-        <div class="logo-container">
-          <img src="https://www.pace.edu.vn/uploads/partners/NPO/Logo_OpenEdu.webp" alt="OpenEdu Initiative">
+        <div class="stat-block">
+          <h3>438,838</h3>
+          <p>CƠ HỘI KINH DOANH</p>
         </div>
-        <div class="content-container">
-          <h5>OpenEdu Initiative</h5>
-          <p>
-            Sáng kiến OpenEdu là “ngôi trường khai phóng trực tuyến” đầu tiên của Việt Nam, với tinh hoa tri thức toàn
-            cầu, nhưng được chuyển ngữ thành tiếng Việt và hoàn toàn miễn phí. OpenEdu được sáng lập bởi MSC và được
-            điều hành bởi IPL Scholarship.
-          </p>
-          <a href="#" class="btn">Tìm hiểu thêm</a>
+        <div class="stat-block">
+          <h3>14,853 TỶ</h3>
+          <p>GIÁ TRỊ KINH DOANH</p>
         </div>
-      </div>
-    </div>
-    <!-- Tổ chức 3 -->
-    <div class="npo-box">
-      <div class="logo-container">
-        <img src="https://www.pace.edu.vn/uploads/partners/NPO/Logo_OpenEdu.webp" alt="OpenEdu Initiative">
-      </div>
-      <div class="content-container">
-        <h5>OpenEdu Initiative</h5>
-        <p>
-          Sáng kiến OpenEdu là “ngôi trường khai phóng trực tuyến” đầu tiên của Việt Nam, với tinh hoa tri thức toàn
-          cầu, nhưng được chuyển ngữ thành tiếng Việt và hoàn toàn miễn phí. OpenEdu được sáng lập bởi MSC và được
-          điều hành bởi IPL Scholarship.
-        </p>
-        <a href="#" class="btn">Tìm hiểu thêm</a>
+        <div class="stat-block">
+          <h3>2 TỶ</h3>
+          <p>DOANH THU BÌNH QUÂN<br>THÀNH VIÊN TỪ BNI</p>
+        </div>
       </div>
     </div>
   </div>
-    <!-- Tổ chức 4 -->
-    <div class="npo-box">
-      <div class="logo-container">
-        <img src="https://www.pace.edu.vn/uploads/partners/NPO/Logo_OpenEdu.webp" alt="OpenEdu Initiative">
-      </div>
-      <div class="content-container">
-        <h5>OpenEdu Initiative</h5>
-        <p>
-          Sáng kiến OpenEdu là “ngôi trường khai phóng trực tuyến” đầu tiên của Việt Nam, với tinh hoa tri thức toàn
-          cầu, nhưng được chuyển ngữ thành tiếng Việt và hoàn toàn miễn phí. OpenEdu được sáng lập bởi MSC và được
-          điều hành bởi IPL Scholarship.
-        </p>
-        <a href="#" class="btn">Tìm hiểu thêm</a>
-      </div>
+</section>
+
+<!-- BNI Vision and Mission -->
+<section class="bni-vision-mission">
+  <div class="container">
+    <div class="left-column">
+      <img src="../msc/assets/banner-hoc-vien-quan-ly-pace.webp" alt="Lifelong Learning Banner">
+    </div>
+    <div class="right-column">
+      <h3 class="red-title">TẦM NHÌN, SỨ MỆNH, TRIẾT LÝ VÀ 7 GIÁ TRỊ CỐT LÕI CỦA BNI</h3>
+      <p><strong>Tầm nhìn của BNI</strong></p>
+      <p>Thay đổi cách Thế giới làm kinh doanh</p>
+      <ul>
+        <li>Giúp thành viên tạo dựng Networking và lòng tin.</li>
+        <li>Trao đi là nhận lại – Givers Gain®.</li>
+        <li>Kết nối và giới thiệu chất lượng, chuyên nghiệp.</li>
+        <li>Tạo môi trường phát triển bản thân và kinh doanh.</li>
+      </ul>
+
+      <p><strong>Tuyên bố sứ mệnh</strong></p>
+      <p>Giúp các thành viên tăng cơ hội kinh doanh bằng hệ thống hỗ trợ, đào tạo và chương trình rõ ràng, chuyên nghiệp.</p>
+
+      <p><strong>Triết lý</strong>: Givers Gain® – Cho là Nhận®</p>
+
+      <p><strong>7 Giá trị cốt lõi của BNI</strong>:</p>
+      <ul class="core-values">
+        <li>1. Cho là Nhận®</li>
+        <li>2. Học tập suốt đời</li>
+        <li>3. Truyền thống + Đổi mới</li>
+        <li>4. Tinh thần tích cực</li>
+        <li>5. Xây dựng mối quan hệ</li>
+        <li>6. Trách nhiệm</li>
+        <li>7. Công nhận</li>
+      </ul>
     </div>
   </div>
-   <!-- Tổ chức 5 -->
-  </section>
+</section>
 
-
-     <!--Members-->
- <!--Ban cố vấn-->
+<!--Ban cố vấn-->
  <section class="partner">
   <h2>BAN CỐ VẤN</h2>
   <p class="subtext">
@@ -446,13 +199,13 @@
   
   <div class="partner-grid">
     <div class="partner-item">
-      <img src="msc/assets/members/PHAvuong.jpg" alt="Phan Huỳnh Anh">
+      <img src="../msc/assets/members/PHAvuong.jpg" alt="Phan Huỳnh Anh">
       <h4>Phan Huỳnh Anh</h4>
       <p>“Cha đẻ” Marketing hiện đại</p>
     </div>
     
     <div class="partner-item">
-      <img src="msc/assets/members/PHAvuong.jpg" alt="Đoàn Đức Minh">
+      <img src="../msc/assets/members/PHAvuong.jpg" alt="Đoàn Đức Minh">
       <h4>Đoàn Đức Minh</h4>
       <p>“Chủ nhân” Nobel kinh tế</p>
     </div>
@@ -470,19 +223,19 @@
       <!---->
       <div class="chu-nhiem-grid">
         <div class="chu-nhiem-item">
-          <img src="msc/assets/members/PHAvuong.jpg" alt="Michael Porter">
+          <img src="../msc/assets/members/PHAvuong.jpg" alt="Michael Porter">
           <h4>Hoàng Cửu Long</h4>
           <p>“Cha đẻ” chiến lược cạnh tranh</p>
         </div>
         <!---->
         <div class="chu-nhiem-item">
-          <img src="msc/assets/members/PHAvuong.jpg" alt="Philip Kotler">
+          <img src="../msc/assets/members/PHAvuong.jpg" alt="Philip Kotler">
           <h4>Phan Huỳnh Anh</h4>
           <p>“Cha đẻ” Marketing hiện đại</p>
         </div>
         <!---->
         <div class="chu-nhiem-item">
-          <img src="msc/assets/members/PHAvuong.jpg" alt="Philip Kotler">
+          <img src="../msc/assets/members/PHAvuong.jpg" alt="Philip Kotler">
           <h4>Đoàn Đức Minh</h4>
           <p>“Chủ nhân” Nobel kinh tế</p>
         </div>
@@ -636,43 +389,43 @@
         <div class="msc-wrapper">
             <div class="msc-item">
                 <div class="msc-image">
-                    <img src="assets/members/PHAvuong.jpg" alt="Nguyễn Văn A">
+                    <img src="../msc/assets/members/PHAvuong.jpg" alt="Nguyễn Văn A">
                 </div>
                 <div class="msc-title">Nguyễn Văn A</div>
             </div>
             <div class="msc-item">
                 <div class="msc-image">
-                    <img src="msc/assets/members/PHAvuong.jpg" alt="Trần Thị B">
+                    <img src="../msc/assets/members/PHAvuong.jpg" alt="Trần Thị B">
                 </div>
                 <div class="msc-title">Trần Thị B</div>
             </div>
             <div class="msc-item">
                 <div class="msc-image">
-                    <img src="msc/assets/members/PHCkhoa.jpg" alt="Lê Văn C">
+                    <img src="../msc/assets/members/PHAvuong.jpg" alt="Lê Văn C">
                 </div>
                 <div class="msc-title">Lê Văn C</div>
             </div>
             <div class="msc-item">
                 <div class="msc-image">
-                    <img src="msc/assets/members/PHDhieu.jpg" alt="Phạm Thị D">
+                    <img src="../msc/assets/members/PHAvuong.jpg" alt="Phạm Thị D">
                 </div>
                 <div class="msc-title">Phạm Thị D</div>
             </div>
             <div class="msc-item">
                 <div class="msc-image">
-                    <img src="msc/assets/members/PHEngoc.jpg" alt="Hoàng Văn E">
+                    <img src="../msc/assets/members/PHAvuong.jpg" alt="Hoàng Văn E">
                 </div>
                 <div class="msc-title">Hoàng Văn E</div>
             </div>
             <div class="msc-item">
                 <div class="msc-image">
-                    <img src="msc/assets/members/PHFphuc.jpg" alt="Ngô Thị F">
+                    <img src="../msc/assets/members/PHAvuong.jpg" alt="Ngô Thị F">
                 </div>
                 <div class="msc-title">Ngô Thị F</div>
             </div>
             <div class="msc-item">
                 <div class="msc-image">
-                    <img src="msc/assets/members/PHGgiang.jpg" alt="Đặng Văn G">
+                    <img src="../msc/assets/members/PHAvuong.jpg" alt="Đặng Văn G">
                 </div>
                 <div class="msc-title">Đặng Văn G</div>
             </div>
@@ -778,9 +531,8 @@
 });
     </script>
 
-    <script src="js/main.js" defer></script>
 
-      <!--Code caurosel-->
+   <!--Code caurosel-->
 <section class="carousel-section">
   <div class="container">
     <div class="section-title" data-aos="fade-up">
@@ -788,25 +540,25 @@
     </div>
     <div class="carousel-wrapper">
       <div class="carousel-track">
-        <img src="msc/assets/Thiết kế chưa có tên.jpg" alt="Hình 1">
-        <img src="msc/assets/Thiết kế chưa có tên.jpg" alt="Hình 2">
-        <img src="msc/assets/Thiết kế chưa có tên.jpg" alt="Hình 3">
-        <img src="msc/assets/Thiết kế chưa có tên.jpg" alt="Hình 4">
-        <img src="msc/assets/Thiết kế chưa có tên.jpg" alt="Hình 5">
-        <img src="msc/assets/Thiết kế chưa có tên.jpg" alt="Hình 6">
-        <img src="msc/assets/Thiết kế chưa có tên.jpg" alt="Hình 7">
-        <img src="msc/assets/Thiết kế chưa có tên.jpg" alt="Hình 8">
+        <img src="../msc/assets/Thiết kế chưa có tên.jpg" alt="Hình 1">
+        <img src="../msc/assets/Thiết kế chưa có tên.jpg" alt="Hình 2">
+        <img src="../msc/assets/Thiết kế chưa có tên.jpg" alt="Hình 3">
+        <img src="../msc/assets/Thiết kế chưa có tên.jpg" alt="Hình 4">
+        <img src="../msc/assets/Thiết kế chưa có tên.jpg" alt="Hình 5">
+        <img src="../msc/assets/Thiết kế chưa có tên.jpg" alt="Hình 6">
+        <img src="../msc/assets/Thiết kế chưa có tên.jpg" alt="Hình 7">
+        <img src="../msc/assets/Thiết kế chưa có tên.jpg" alt="Hình 8">
       </div>
     </div>
   </div>
 </section>
-<!--End Coder carousel-->
 
-<!--Footer-->
+
+  <!--Footer-->
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-col">
-          <img src="msc/assets/logo/logo.png" alt="msc Logo" class="footer-logo" />
+          <img src="../msc/assets/logo/logo.png" alt="msc Logo" class="footer-logo" />
           <p class="footer-sub">279 Nguyễn Tri Phương, Quận 10, TP.Hồ Chí Minh</p>
           <p class="footer-sub">Điện Thoại: (+84) 329 381 489</p>
           <p class="footer-sub">Email: info@msc.edu.vn</p>
@@ -818,9 +570,9 @@
         <div class="footer-col">
           <h4>Kết nối với chúng tôi</h4>
           <div class="social-icons">
-            <a href="https://www.facebook.com/msc.edu.vn"><img src="msc/assets/logo/fb.png" alt="Facebook" /></a>
-            <a href="#"><img src="msc/assets/logo/ytb copy.png" alt="YouTube" /></a>
-            <a href="https://zalo.me/g/acumou501"><img src="msc/assets/logo/zalo.webp" alt="Yputebe" /></a>
+            <a href="https://www.facebook.com/msc.edu.vn"><img src="../msc/assets/logo/fb.png" alt="Facebook" /></a>
+            <a href="#"><img src="../msc/assets/logo/ytb copy.png" alt="YouTube" /></a>
+            <a href="https://zalo.me/g/acumou501"><img src="../msc/assets/logo/zalo.webp" alt="Yputebe" /></a>
           </div>
 
           <!-- Fanpage Facebook -->
@@ -838,7 +590,7 @@
           <form class="subscribe-form">
             <input type="email" placeholder="Email của bạn" required />
             <button type="submit">
-              <img src="msc/assets/send.png" alt="Gửi" />
+              <img src="../msc/assets/send.png" alt="Gửi" />
             </button>
           </form>
         </div>
@@ -878,7 +630,7 @@
     <script src="../js/main.js" defer></script>
     <div class="mobile-overlay" id="mobile-overlay"></div>
     <!-- Back to Top Button -->
-
+<script src="../js/script.js"></script>
   </body>
 
 </html>

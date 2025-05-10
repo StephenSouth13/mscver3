@@ -121,8 +121,7 @@ header {
 /* Menu mobile */
 .nav-mobile-menu {
   position: fixed;
-  top: 0;
-  right: -100%; /* Ẩn menu */
+  top: 0; right: -100%;
   width: 75%;
   max-width: 280px;
   height: 100vh;
@@ -134,7 +133,7 @@ header {
 }
 
 .nav-mobile-menu.active {
-  right: 0; /* Hiển thị menu */
+  right: 0;
 }
 
 .nav-mobile {
@@ -153,6 +152,25 @@ header {
   font-size: 18px;
 }
 
+.nav-mobile li a {
+  text-decoration: none;
+  color: #ffffff;
+  border-bottom: solid 2px #003B5C;
+  font-weight: 500;
+  transition: all ease-in-out .25s;
+}
+
+.nav-mobile li a:hover {
+  border-color: #0091D0;
+}
+
+/* Header menu thu gọn */
+.mobile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 #mobile-close {
   background: none;
   border: none;
@@ -160,22 +178,9 @@ header {
   font-size: 24px;
   cursor: pointer;
 }
-
-/* Overlay */
-.mobile-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.6); /* Overlay đen mờ */
-  z-index: 998;
-  display: none;
-  transition: opacity 0.3s ease;
-}
-
-.mobile-overlay.active {
-  display: block;
+.menu {
+  position: fixed; /* hoặc absolute, tùy vào layout */
+  z-index: 9999;
 }
 
 /* Ẩn menu desktop trên mobile */
@@ -197,11 +202,10 @@ header {
 
 .mobile-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 0; left: 0;
   width: 100%;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.6); /* Overlay đen mờ */
+  background-color: rgba(0, 0, 0, 0.6); /* đen mờ */
   z-index: 998;
   display: none;
   transition: opacity 0.3s ease;
@@ -221,111 +225,401 @@ header {
 } */
 
 /* Hero Section */
-.hero-carousel {
-  position: relative;
-  overflow: hidden;
-  padding: 0;
-  margin: 0;
-  width: 100vw;
+.hero-section {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      background-image: url('../msc/assets/banner-danh-muc-dao-tao.webp'); /* Đổi thành ảnh của bạn */
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: hsla(198, 100%, 39%, 0.6); /* Lớp phủ đỏ mờ */
+      z-index: 1;
+    }
+
+    .hero-text {
+      position: relative;
+      z-index: 2;
+      font-size: 24px;
+      font-weight: bold;
+      padding: 20px;
+    }
+/*Nội dung chính*/
+
+/* Cấu trúc lưới và định dạng */
+.bni-vietnam {
+  padding: 60px 20px;
+  font-family: Arial, sans-serif;
 }
 
-.carousel-container {
+.bni-vietnam .container {
+  max-width: 1200px;
+  margin: auto;
   display: flex;
-  transition: transform 0.5s ease-in-out;
-  width: 100%; /* Đặt lại width */
+  flex-wrap: wrap; /* Cho phép các cột xếp chồng trên mobile */
+  gap: 40px;
 }
 
-.carousel-slide {
-  flex: 0 0 100%; /* Mỗi slide chiếm 100% chiều rộng */
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+.bni-vietnam .col-md-7 {
+  flex: 0 0 60%; /* Chiếm 60% chiều rộng trên desktop */
 }
 
-.carousel-slide.active {
-  opacity: 1;
-}
-
-.carousel-slide img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover; /* đảm bảo ảnh phủ hết vùng */
-}
-
-/* Nút điều hướng */
-.hero-carousel button.prev,
-.hero-carousel button.next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  font-size: 28px;
-  padding: 10px 15px;
-  cursor: pointer;
-  z-index: 10;
-}
-button.prev {
-  left: 10px;
-}
-button.next {
-  right: 10px;
-}
-
-/* Dots */
-.carousel-dots {
-  position: absolute;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
+.bni-vietnam .col-md-5 {
+  flex: 0 0 35%; /* Chiếm 35% chiều rộng trên desktop */
   display: flex;
-  gap: 10px;
-}
-.carousel-dots .dot {
-  width: 12px;
-  height: 12px;
-  background: #ccc;
-  border-radius: 50%;
-  cursor: pointer;
-}
-.carousel-dots .dot.active {
-  background: hsl(0, 0%, 95%);
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: start;
+  gap: 30px;
 }
 
 /* Responsive cho màn hình nhỏ */
 @media (max-width: 768px) {
-  .nav-menu {
-    display: none;
-    flex-direction: column;
-    background-color: white;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    padding: 15px 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  .bni-vietnam .col-md-7,
+  .bni-vietnam .col-md-5 {
+    flex: 0 0 100%; /* Chiếm 100% chiều rộng trên mobile */
   }
 
-  .nav-menu.active {
-    display: flex;
-  }
-
-  .mobile-nav-toggle {
-    display: block;
-  }
-
-  body {
-    font-size: 14px; /* Điều chỉnh kích thước chữ cho di động */
-  }
-
-  .navbar {
-    padding: 10px; /* Điều chỉnh padding cho navbar */
-  }
-
-  .nav-menu {
-    gap: 10px; /* Giảm khoảng cách giữa các mục trong nav-menu */
+  .bni-vietnam .col-md-5 {
+    margin-top: 20px; /* Tạo khoảng cách giữa 2 cột */
   }
 }
+
+/* Văn bản bên trái */
+.bni-vietnam h2 {
+  color: #c8102e;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.bni-vietnam p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+/* Cột thông tin bên phải */
+.stat-block {
+  width: 45%; /* Chia đều các khối thông tin */
+  text-align: center;
+  color: #c8102e;
+}
+
+.stat-block h3 {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+}
+
+.stat-block p {
+  margin-top: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.bni-vision-mission {
+  padding: 60px 20px;
+  background-color: #fff;
+  font-family: 'Arial', sans-serif;
+}
+
+.bni-vision-mission .container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.bni-vision-mission .left-column {
+  flex: 0 0 35%;
+}
+
+.bni-vision-mission .left-column img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.bni-vision-mission .right-column {
+  flex: 0 0 60%;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.bni-vision-mission .red-title {
+  color: #c8102e;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.bni-vision-mission ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.bni-vision-mission ul li {
+  margin-bottom: 10px;
+}
+
+.bni-vision-mission .core-values li {
+  font-weight: bold;
+  color: #c8102e;
+}
+
+/* ===============================
+   FLOATING CONTACT ICONS
+================================= */
+.floating-contact {
+  position: fixed;
+  right: 20px;
+  bottom: 80px; /* Đẩy các icon lên trên nút Back to Top */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 9999;
+  animation: fadeInRight 1s ease forwards;
+}
+
+.floating-contact .contact-btn img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.floating-contact .contact-btn img:hover {
+  transform: scale(1.15) rotate(5deg);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 20px; /* Đặt nút Back to Top dưới các icon */
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #004080; /* Màu xanh đậm */
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: opacity 0.3s, transform 0.3s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+
+.back-to-top:hover {
+  background-color: #003366; /* Màu xanh đậm hơn khi hover */
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top i {
+  font-size: 24px;
+}
+
+
+/*footer*/
+.footer {
+  background: #002a5c;
+  color: white;
+  padding: 40px 20px;
+}
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+}
+.footer-col {
+  flex: 1 1 300px;
+}
+.footer-logo {
+  height: 80px;
+  margin-bottom: 6px;
+}
+.footer-sub {
+  font-size: 16px;
+  opacity: 0.8;
+}
+.footer-col h4 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+.social-icons a img {
+  width: 35px;
+  margin-right: 12px;
+}
+.fb-box img {
+  width: 150%;
+  max-width: 300px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+}
+.subscribe-form {
+  display: flex;
+  background: white;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 8px;
+  max-width: 350px;
+}
+.subscribe-form input {
+  border: none;
+  padding: 12px; /* Tăng padding cho input */
+  flex: 1;
+  font-size: 16px; /* Tăng kích thước chữ trong input */
+}
+.subscribe-form button {
+  background: #ffc107;
+  border: none;
+  padding: 12px 16px; /* Tăng padding cho button */
+  cursor: pointer;
+  font-size: 16px; /* Tăng kích thước chữ trong button */
+}
+.subscribe-form button img {
+  width: 28px;
+}
+.footer-privacy {
+  font-size: 10px; /* Tăng kích thước chữ lên 14px */
+  margin-top: 16px;
+}
+.footer-privacy a {
+  color: #ccc;
+  text-decoration: underline;
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-col {
+    flex-basis: auto;
+  }
+
+  .footer-logo {
+    height: 70px;
+  }
+
+  .social-icons a img {
+    width: 30px;
+  }
+
+  .subscribe-form {
+    max-width: 100%;
+  }
+
+  .subscribe-form input,
+  .subscribe-form button {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .subscribe-form button img {
+    width: 20px;
+  }
+
+  .bni-vietnam .container {
+    flex-direction: column; /* Xếp chồng các cột */
+  }
+
+  .bni-vietnam .col-md-7,
+  .bni-vietnam .col-md-5 {
+    flex: 0 0 100%; /* Chiếm toàn bộ chiều rộng */
+  }
+
+  .bni-vietnam .col-md-5 {
+    display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 cột chia đều */
+  gap: 30px;
+  color: #c8102e;
+  text-align: center;
+  }
+
+  .stat-block {
+    width: 100%; /* Mỗi khối thông tin chiếm toàn bộ chiều rộng */
+    margin-bottom: 20px; /* Tạo khoảng cách giữa các khối */
+  }
+}
+/*Caurousel*/
+.carousel-section {
+  padding: 60px 0; /* Thêm padding để tạo khoảng cách với các section khác */
+}
+
+.section-title {
+
+  text-align: center;
+  margin-bottom: 40px; /* Thêm margin-bottom để tạo khoảng cách với carousel */
+}
+.section-title h2{
+  font-size: 30px;
+}
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+}
+
+.carousel-track {
+  display: flex;
+  width: 200%;
+  animation: scroll 15s linear infinite;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-track img {
+  width: 10%;
+  flex-shrink: 0;
+  margin: 0 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@media (max-width: 768px) {
+  .carousel-track img {
+    width: 20%;
+    margin: 0 5px;
+  }
+}
+/* */
 /*Ban cố vấn */
 .partner {
   padding: 60px 20px;
@@ -491,306 +785,7 @@ color: #444;
   }
 }
 
-
-
-/* ===============================
-   FLOATING CONTACT ICONS
-================================= */
-.floating-contact {
-  position: fixed;
-  right: 20px;
-  bottom: 80px; /* Đẩy các icon lên trên nút Back to Top */
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  z-index: 9999;
-  animation: fadeInRight 1s ease forwards;
-}
-
-.floating-contact .contact-btn img {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.floating-contact .contact-btn img:hover {
-  transform: scale(1.15) rotate(5deg);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
-}
-
-/* Back to Top Button */
-.back-to-top {
-  position: fixed;
-  bottom: 20px; /* Đặt nút Back to Top dưới các icon */
-  right: 20px;
-  width: 50px;
-  height: 50px;
-  background-color: #004080; /* Màu xanh đậm */
-  color: #fff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  transition: opacity 0.3s, transform 0.3s;
-  opacity: 0;
-  visibility: hidden;
-  z-index: 1000;
-}
-
-.back-to-top:hover {
-  background-color: #003366; /* Màu xanh đậm hơn khi hover */
-}
-
-.back-to-top.show {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-.back-to-top i {
-  font-size: 24px;
-}
-
-/* ====================================
-     PROJECT SECTION
-  ==================================== */
-section {
-  background-color: #005a99;
-  padding: 60px 0;
-}
-
-.section-title {
-  font-size: 28px;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: white;
-  margin-bottom: 10px;
-}
-
-.section-desc {
-  color: white;
-  font-size: 16px;
-  line-height: 1.7;
-}
-
-.projects {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.project {
-  background-color: #ffffff;
-  border-radius: 4px;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-}
-
-.project:hover {
-  transform: translateY(-5px);
-}
-
-.project .row {
-  margin: 0;
-}
-
-.img_npo {
-  background-color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 16px;
-}
-
-.img_npo img {
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
-}
-
-.project-name {
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 10px;
-} 
-
-.project-desc {
-  font-size: 12px;
-  line-height: 1.6;
-  color: #ffffff;
-  text-align: justify;
-}
-
-@media (max-width: 768px) {
-  .project .px-5 {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-  }
-
-  .project-name {
-    font-size: 18px;
-  }
-
-  .project-desc {
-    font-size: 14px;
-  }
-}
-/*footer*/
-.footer {
-  background: #002a5c;
-  color: white;
-  padding: 40px 20px;
-}
-.footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: auto;
-  gap: 40px;
-}
-.footer-col {
-  flex: 1 1 300px;
-}
-.footer-logo {
-  height: 80px;
-  margin-bottom: 6px;
-}
-.footer-sub {
-  font-size: 16px;
-  opacity: 0.8;
-}
-.footer-col h4 {
-  font-size: 20px;
-  margin-bottom: 12px;
-}
-.social-icons a img {
-  width: 35px;
-  margin-right: 12px;
-}
-.fb-box img {
-  width: 150%;
-  max-width: 300px;
-  border: 1px solid #ccc;
-  margin-top: 10px;
-}
-.subscribe-form {
-  display: flex;
-  background: white;
-  border-radius: 4px;
-  overflow: hidden;
-  margin-top: 8px;
-  max-width: 350px;
-}
-.subscribe-form input {
-  border: none;
-  padding: 12px; /* Tăng padding cho input */
-  flex: 1;
-  font-size: 16px; /* Tăng kích thước chữ trong input */
-}
-.subscribe-form button {
-  background: #ffc107;
-  border: none;
-  padding: 12px 16px; /* Tăng padding cho button */
-  cursor: pointer;
-  font-size: 16px; /* Tăng kích thước chữ trong button */
-}
-.subscribe-form button img {
-  width: 28px;
-}
-.footer-privacy {
-  font-size: 10px; /* Tăng kích thước chữ lên 14px */
-  margin-top: 16px;
-}
-.footer-privacy a {
-  color: #ccc;
-  text-decoration: underline;
-}
-
-/* Responsive styles for mobile */
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .footer-col {
-    flex-basis: auto;
-  }
-
-  .footer-logo {
-    height: 70px;
-  }
-
-  .social-icons a img {
-    width: 30px;
-  }
-
-  .subscribe-form {
-    max-width: 100%;
-  }
-
-  .subscribe-form input,
-  .subscribe-form button {
-    padding: 10px;
-    font-size: 14px;
-  }
-
-  .subscribe-form button img {
-    width: 20px;
-  }
-}
-/*Caurousel*/
-.carousel-section {
-  padding: 60px 0; /* Thêm padding để tạo khoảng cách với các section khác */
-}
-
-.section-title {
-
-  text-align: center;
-  margin-bottom: 40px; /* Thêm margin-bottom để tạo khoảng cách với carousel */
-}
-.section-title h2{
-  font-size: 30px;
-}
-.carousel-container {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  white-space: nowrap;
-}
-
-.carousel-track {
-  display: flex;
-  width: 200%;
-  animation: scroll 15s linear infinite;
-  transition: transform 0.5s ease-in-out;
-}
-
-.carousel-track img {
-  width: 10%;
-  flex-shrink: 0;
-  margin: 0 10px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-@keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-@media (max-width: 768px) {
-  .carousel-track img {
-    width: 20%;
-    margin: 0 5px;
-  }
-}
-
-/* ĐỐI TÁC ĐỒNG HÀNH SECTION */
+/**/
 .carousel-section {
   padding: 60px 0;
 }
